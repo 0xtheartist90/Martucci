@@ -114,8 +114,8 @@ const Page = () => {
                 <div className='flex items-center gap-6'>
                     <a
                         href='tel:+17542195694'
-                        className='hidden text-sm tracking-[0.15em] text-white/80 transition-colors hover:text-white md:block'>
-                        754-219-5694
+                        className='hidden border border-white/40 px-5 py-2.5 text-xs font-bold tracking-[0.2em] text-white/90 uppercase transition-colors duration-300 hover:border-white hover:text-white md:block'>
+                        Call Us
                     </a>
                     <a
                         href={OPENTABLE_URL}
@@ -347,18 +347,11 @@ const Page = () => {
                             Your table in Wynwood is waiting
                         </h2>
                         <p className='mx-auto mt-6 max-w-xl leading-relaxed text-white/80'>
-                            Open Wednesday through Sunday from 5:00 PM. Book online in seconds via OpenTable, or call
-                            us directly.
+                            Open Wednesday through Sunday from 5:00 PM. Book online in seconds via OpenTable.
                         </p>
                         <div className='mt-10 flex justify-center'>
                             <ReserveWidget />
                         </div>
-                        <p className='mt-8 text-xs tracking-[0.2em] text-white/60 uppercase'>
-                            Prefer to call?{' '}
-                            <a href='tel:+17542195694' className='text-white underline underline-offset-4'>
-                                754-219-5694
-                            </a>
-                        </p>
                     </Reveal>
                 </div>
             </section>
