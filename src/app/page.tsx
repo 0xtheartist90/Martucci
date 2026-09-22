@@ -353,82 +353,109 @@ const Page = () => {
                         <div className='mt-10 flex justify-center'>
                             <ReserveWidget />
                         </div>
-                        <div className='mt-6 flex justify-center'>
-                            <a
-                                href='tel:+17542195694'
-                                className='inline-block border border-white/60 px-8 py-4 text-sm font-bold tracking-[0.2em] text-white transition-colors duration-300 hover:bg-white hover:text-black'>
-                                CALL 754-219-5694
+                        <p className='mt-8 text-xs tracking-[0.2em] text-white/60 uppercase'>
+                            Prefer to call?{' '}
+                            <a href='tel:+17542195694' className='text-white underline underline-offset-4'>
+                                754-219-5694
                             </a>
-                        </div>
-                        <div className='mx-auto mt-14 grid max-w-2xl gap-8 text-sm sm:grid-cols-2'>
-                            <div>
-                                <div className='mb-3 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>
-                                    Hours
-                                </div>
-                                <p className='leading-relaxed text-white/80'>
-                                    Mon – Tue: Closed
-                                    <br />
-                                    Wed – Thu: 5:00 PM – 10:30 PM
-                                    <br />
-                                    Fri – Sat: 5:00 PM – 11:30 PM
-                                    <br />
-                                    Sun: 5:00 PM – 10:30 PM
-                                </p>
-                            </div>
-                            <div>
-                                <div className='mb-3 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>
-                                    Location
-                                </div>
-                                <p className='leading-relaxed text-white/80'>
-                                    10 NE 27th Street
-                                    <br />
-                                    Miami, Florida 33137
-                                    <br />
-                                    <a
-                                        href='https://www.google.com/maps?cid=1025007931396253817'
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        className='underline underline-offset-4 transition-colors hover:text-white'>
-                                        Get directions
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
+                        </p>
                     </Reveal>
                 </div>
             </section>
 
             {/* ── Footer ─────────────────────────────────── */}
-            <footer className='border-t border-white/10 px-6 py-12 md:px-12'>
-                <div className='flex flex-col items-start justify-between gap-8 md:flex-row md:items-end'>
-                    <h3 className='font-display text-2xl leading-tight font-medium uppercase md:text-3xl'>
-                        Francesco
-                        <br />
-                        Martucci
-                        <br />
-                        Wynwood
-                    </h3>
-                    <div className='flex flex-wrap gap-6 text-xs font-bold tracking-[0.2em] uppercase'>
-                        <a href='tel:+17542195694' className='text-white/70 transition-colors hover:text-white'>
-                            754-219-5694
-                        </a>
+            <footer className='border-t border-white/10 px-6 pt-16 pb-8 md:px-12 md:pt-20'>
+                <div className='grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8'>
+                    <div>
+                        <h3 className='font-display text-3xl leading-[1.1] font-medium uppercase md:text-4xl'>
+                            Francesco
+                            <br />
+                            Martucci
+                            <br />
+                            Wynwood
+                        </h3>
+                        <p className='mt-6 max-w-xs text-sm leading-relaxed text-white/50 italic'>
+                            &ldquo;For me, pizza is far more than just food. It is my passion, my craft, my life.&rdquo;
+                        </p>
+                    </div>
+                    <div>
+                        <div className='mb-4 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>Hours</div>
+                        <ul className='space-y-2 text-sm leading-relaxed text-white/70'>
+                            <li className='flex justify-between gap-4'>
+                                <span>Mon – Tue</span>
+                                <span className='text-white/40'>Closed</span>
+                            </li>
+                            <li className='flex justify-between gap-4'>
+                                <span>Wed – Thu</span>
+                                <span>5:00 – 10:30 PM</span>
+                            </li>
+                            <li className='flex justify-between gap-4'>
+                                <span>Fri – Sat</span>
+                                <span>5:00 – 11:30 PM</span>
+                            </li>
+                            <li className='flex justify-between gap-4'>
+                                <span>Sun</span>
+                                <span>5:00 – 10:30 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div className='mb-4 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>
+                            Location
+                        </div>
+                        <p className='text-sm leading-relaxed text-white/70'>
+                            10 NE 27th Street
+                            <br />
+                            Miami, Florida 33137
+                        </p>
                         <a
-                            href='mailto:info@martuccimiami.com'
-                            className='text-white/70 transition-colors hover:text-white'>
-                            Email
-                        </a>
-                        <a
-                            href='https://www.instagram.com/martucci_miami/'
+                            href='https://www.google.com/maps?cid=1025007931396253817'
                             target='_blank'
                             rel='noopener noreferrer'
-                            className='text-white/70 transition-colors hover:text-white'>
-                            Instagram
+                            className='mt-3 inline-block text-sm text-white/70 underline underline-offset-4 transition-colors hover:text-white'>
+                            Get directions
                         </a>
                     </div>
+                    <div>
+                        <div className='mb-4 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>Contact</div>
+                        <ul className='space-y-2 text-sm leading-relaxed'>
+                            <li>
+                                <a href='tel:+17542195694' className='text-white/70 transition-colors hover:text-white'>
+                                    754-219-5694
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='mailto:info@martuccimiami.com'
+                                    className='text-white/70 transition-colors hover:text-white'>
+                                    info@martuccimiami.com
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='https://www.instagram.com/martucci_miami/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='text-white/70 transition-colors hover:text-white'>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={OPENTABLE_URL}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='text-white/70 transition-colors hover:text-white'>
+                                    Reserve on OpenTable
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <p className='mt-8 text-xs text-white/40'>
-                    10 NE 27th Street, Miami, Florida 33137 · © {new Date().getFullYear()} Francesco Martucci Wynwood
-                </p>
+                <div className='mt-14 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between'>
+                    <span>© {new Date().getFullYear()} Francesco Martucci Wynwood</span>
+                    <span>10 NE 27th Street, Miami, Florida 33137</span>
+                </div>
             </footer>
         </main>
     );
