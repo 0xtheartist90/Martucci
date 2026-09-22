@@ -301,9 +301,9 @@ const Page = () => {
                         <div className='grid items-center gap-10 md:grid-cols-[260px_1fr] md:gap-12 lg:grid-cols-[360px_1fr] lg:gap-14'>
                             <div className='overflow-hidden'>
                                 <LightboxImage
-                                    src='/images/Martucci/Francesco%20(4).webp'
-                                    alt='Chef Francesco Martucci working the pass in his Wynwood kitchen'
-                                    className='aspect-[4/5] w-full object-cover grayscale transition-transform duration-700 hover:scale-105'
+                                    src='/images/thechef.jpg'
+                                    alt='Low-key profile portrait of chef Francesco Martucci, Wynwood, Miami'
+                                    className='aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-105'
                                 />
                             </div>
                             <div>
