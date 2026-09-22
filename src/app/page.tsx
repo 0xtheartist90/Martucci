@@ -298,25 +298,38 @@ const Page = () => {
             </section>
 
             {/* ── The chef ───────────────────────────────── */}
-            <section className='border-t border-white/10 px-6 py-16 md:px-12 md:py-20'>
+            <section className='border-t border-white/10 px-6 py-20 md:px-12 md:py-28'>
                 <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
-                    <div className='md:self-start'>
+                    <div className='md:sticky md:top-28 md:self-start'>
                         <SectionLabel>/THE CHEF</SectionLabel>
+                        <p className='mt-4 text-sm leading-relaxed text-white/70'>
+                            The craft of Caserta, fired nightly in Wynwood.
+                        </p>
                     </div>
                     <Reveal>
-                        <div className='flex flex-col items-start gap-8 sm:flex-row sm:items-center'>
-                            <img
-                                src='/images/Martucci/Francesco%20(4).webp'
-                                alt='Chef Francesco Martucci working the pass in his Wynwood kitchen'
-                                loading='lazy'
-                                className='aspect-square w-40 object-cover grayscale md:w-48'
-                            />
+                        <div className='grid items-center gap-10 md:grid-cols-[260px_1fr] md:gap-12 lg:grid-cols-[360px_1fr] lg:gap-14'>
+                            <div className='overflow-hidden'>
+                                <img
+                                    src='/images/Martucci/Francesco%20(4).webp'
+                                    alt='Chef Francesco Martucci working the pass in his Wynwood kitchen'
+                                    loading='lazy'
+                                    className='aspect-[4/5] w-full object-cover grayscale transition-transform duration-700 hover:scale-105'
+                                />
+                            </div>
                             <div>
-                                <p className='max-w-xl text-lg leading-relaxed text-white/80'>
+                                <h2 className='font-display text-3xl leading-tight font-medium uppercase md:text-4xl'>
+                                    The world&rsquo;s best pizza chef
+                                </h2>
+                                <p className='mt-6 max-w-xl text-lg leading-relaxed text-white/80'>
                                     Behind every pizza stands Francesco Martucci of Pizzeria I Masanielli, Caserta,
-                                    named the world&rsquo;s best pizza chef. His craft, now fired nightly in Wynwood.
+                                    the pizzeria voted number one in the world. Decades of obsession with dough,
+                                    fire and flavor, now served table-side in Miami.
                                 </p>
-                                <p className='mt-3 text-xs tracking-[0.2em] text-[#929292] uppercase'>
+                                <p className='mt-4 max-w-xl text-sm leading-relaxed text-white/50 italic'>
+                                    &ldquo;For me, pizza is far more than just food. It is my passion, my craft, my
+                                    life, and my way of expressing both tradition and creativity.&rdquo;
+                                </p>
+                                <p className='mt-6 text-xs tracking-[0.2em] text-[#929292] uppercase'>
                                     Francesco Martucci · Chef &amp; Pizzaiolo
                                 </p>
                             </div>
