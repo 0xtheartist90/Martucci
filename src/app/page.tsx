@@ -20,7 +20,7 @@ const AWARDS = [
 const PIZZAS = [
     {
         src: '/images/cdn/pizza-smoking.jpg',
-        alt: 'Wood-fired Neapolitan pizza with smoking char at Francesco Martucci Wynwood, Miami',
+        alt: 'Wood-fired pizza with smoking char at Francesco Martucci Wynwood, Miami',
         cell: 'col-span-2 aspect-[16/10] md:col-span-4 md:aspect-[2/1]'
     },
     {
@@ -30,7 +30,7 @@ const PIZZAS = [
     },
     {
         src: '/images/Martucci/Francesco%20(6).webp',
-        alt: 'Neapolitan pizza topped with Kalamata olives and garlic on a charred crust',
+        alt: 'Wood-fired pizza topped with Kalamata olives and garlic on a charred crust',
         cell: 'aspect-square md:col-span-2'
     },
     {
@@ -90,7 +90,7 @@ const CRAFT = [
     },
     {
         title: 'The Oven',
-        text: 'A dedicated wood-fired hearth delivers the authentic crisp, soft-centered, slightly smoky char of true Neapolitan pizza.'
+        text: 'A dedicated wood-fired hearth delivers the authentic crisp, soft-centered, slightly smoky char of a true wood-fired pizza.'
     },
     {
         title: 'The Experience',
@@ -284,7 +284,7 @@ const Page = () => {
                                 <div className='aspect-[4/3] overflow-hidden'>
                                     <LightboxImage
                                         src='/images/Martucci/Francesco%20(5).webp'
-                                        alt='Slice of Neapolitan pizza with melted mozzarella and basil on a black plate'
+                                        alt='Slice of wood-fired pizza with melted mozzarella and basil on a black plate'
                                         className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
                                     />
                                 </div>
