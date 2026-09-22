@@ -143,21 +143,14 @@ const Page = () => {
                         Wood-Fired
                         <br />
                         Neapolitan Pizza
-                        <br />
-                        in Wynwood
                     </h1>
                     <p className='mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg'>
                         The legendary pizza of Caserta, Italy: long-fermented, wood-fired and ultra-light, now in the
-                        heart of Miami. Tables fill fast. Reserve yours tonight.
+                        heart of Wynwood, Miami. Tables fill fast. Reserve yours tonight.
                     </p>
                     <div className='mt-8'>
                         <ReserveWidget />
                     </div>
-                    <a
-                        href='#pizza'
-                        className='mt-6 inline-block text-xs font-bold tracking-[0.25em] text-white/70 uppercase underline underline-offset-8 transition-colors hover:text-white'>
-                        Or see the pizza first ↓
-                    </a>
                 </div>
             </section>
 
