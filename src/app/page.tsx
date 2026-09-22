@@ -136,17 +136,17 @@ const Page = () => {
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
                 <div className='relative z-10 w-full px-6 pt-32 pb-16 md:px-12 md:pb-24'>
-                    <div className='mb-6 inline-block border border-white/40 px-4 py-2 text-[11px] font-bold tracking-[0.25em] text-white/90 uppercase'>
+                    <div className='mb-5 text-[11px] font-bold tracking-[0.3em] text-white/60 uppercase'>
                         #1 Pizzeria in the World · 50 Top Pizza 2025
                     </div>
-                    <h1 className='font-display max-w-4xl text-5xl leading-[1.05] font-medium tracking-tight uppercase md:text-7xl lg:text-8xl'>
-                        Wood-Fired
+                    <h1 className='font-display max-w-3xl text-4xl leading-[1.12] font-normal md:text-5xl lg:text-6xl'>
+                        Wood-fired Neapolitan pizza,
                         <br />
-                        Neapolitan Pizza
+                        from Caserta to Wynwood.
                     </h1>
-                    <p className='mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg'>
-                        The legendary pizza of Caserta, Italy: long-fermented, wood-fired and ultra-light, now in the
-                        heart of Wynwood, Miami. Tables fill fast. Reserve yours tonight.
+                    <p className='mt-5 max-w-lg text-base leading-relaxed text-white/75'>
+                        Long-fermented, ultra-light and fired in ninety seconds, in the heart of Miami. Tables fill
+                        fast. Reserve yours tonight.
                     </p>
                     <div className='mt-8'>
                         <ReserveWidget />
