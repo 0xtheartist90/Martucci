@@ -196,16 +196,6 @@ const Page = () => {
                                 </Reveal>
                             ))}
                         </div>
-                        <Reveal className='mt-10'>
-                            <div className='flex flex-wrap gap-4'>
-                                <CallButton />
-                                <a
-                                    href='#menu'
-                                    className='inline-block border border-white/60 px-8 py-4 text-sm font-bold tracking-[0.2em] text-white transition-colors duration-300 hover:bg-white hover:text-black'>
-                                    VIEW FULL MENU
-                                </a>
-                            </div>
-                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -227,18 +217,27 @@ const Page = () => {
                             </h2>
                         </Reveal>
                         <Reveal className='mt-10'>
-                            <div className='border border-white/15 p-8 md:p-10'>
-                                <div className='flex flex-wrap items-baseline justify-between gap-4'>
-                                    <h3 className='font-display text-2xl font-medium uppercase md:text-3xl'>
-                                        Degustazione · Tasting Menu
-                                    </h3>
-                                    <span className='text-lg text-white/80'>180 per person</span>
+                            <div className='grid md:grid-cols-[1fr_320px]'>
+                                <div className='border border-white/15 p-8 max-md:border-b-0 md:border-r-0 md:p-10'>
+                                    <div className='flex flex-wrap items-baseline justify-between gap-4'>
+                                        <h3 className='font-display text-2xl font-medium uppercase md:text-3xl'>
+                                            Degustazione · Tasting Menu
+                                        </h3>
+                                        <span className='text-lg text-white/80'>180 per person</span>
+                                    </div>
+                                    <p className='mt-4 max-w-2xl leading-relaxed text-white/60'>
+                                        Eight courses through the world of Martucci: from the Insalata di Funghi
+                                        Assoluti and Tortelli Cacio e Pepe to A5 Wagyu alla Brace, the two-temperature
+                                        Futuro di Marinara and Sichuan gelato. Sommelier-selected wine pairing, 100.
+                                    </p>
                                 </div>
-                                <p className='mt-4 max-w-2xl leading-relaxed text-white/60'>
-                                    Eight courses through the world of Martucci: from the Insalata di Funghi Assoluti
-                                    and Tortelli Cacio e Pepe to A5 Wagyu alla Brace, the two-temperature Futuro di
-                                    Marinara and Sichuan gelato. Sommelier-selected wine pairing, 100.
-                                </p>
+                                <div className='overflow-hidden max-md:h-56'>
+                                    <LightboxImage
+                                        src='/images/cdn/pizza-selection.jpg'
+                                        alt='Selection of wood-fired pizzas fresh from the oven at Francesco Martucci'
+                                        className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
+                                    />
+                                </div>
                             </div>
                         </Reveal>
                         <Reveal className='mt-12'>
