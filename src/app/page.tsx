@@ -134,13 +134,13 @@ const Page = () => {
                     <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
                     <div className='relative z-10 w-full px-6 pt-28 pb-10 md:px-12 md:pt-32 md:pb-44'>
                         <img src='/images/cdn/laurel-white.png' alt='' className='mb-5 h-10 w-auto opacity-90 md:h-12' />
-                        <h1 className='font-display max-w-2xl text-4xl leading-[1.05] font-medium uppercase md:text-6xl'>
-                            #1 Pizzeria
+                        <h1 className='font-display max-w-2xl text-3xl leading-[1.1] font-medium uppercase md:text-5xl'>
+                            Best Pizzeria
                             <br />
-                            in the World
+                            in the World 2019–2025
                         </h1>
                         <div className='mt-4 text-[11px] font-bold tracking-[0.35em] text-white/60 uppercase md:text-xs'>
-                            50 Top Pizza · 2025
+                            50 Top Pizza
                         </div>
                     </div>
                 </div>
