@@ -1,5 +1,6 @@
 import HeroVideo from '@/components/hero-video';
 import LightboxImage from '@/components/lightbox-image';
+import MenuTabs from '@/components/menu-tabs';
 import OpenTableWidget from '@/components/opentable-widget';
 import Reveal from '@/components/reveal';
 
@@ -199,11 +200,59 @@ const Page = () => {
                             <div className='flex flex-wrap gap-4'>
                                 <CallButton />
                                 <a
+                                    href='#menu'
+                                    className='inline-block border border-white/60 px-8 py-4 text-sm font-bold tracking-[0.2em] text-white transition-colors duration-300 hover:bg-white hover:text-black'>
+                                    VIEW FULL MENU
+                                </a>
+                            </div>
+                        </Reveal>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── The menu ───────────────────────────────── */}
+            <section id='menu' className='border-t border-white/10 px-6 py-20 md:px-12 md:py-28'>
+                <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
+                    <div className='md:sticky md:top-28 md:self-start'>
+                        <SectionLabel>/THE MENU</SectionLabel>
+                        <p className='mt-4 text-sm leading-relaxed text-white/70'>
+                            Two-temperature signature pizzas, wood-fired classics, handmade pasta and dolci. Menu
+                            changes with the seasons.
+                        </p>
+                    </div>
+                    <div>
+                        <Reveal>
+                            <h2 className='font-display max-w-3xl text-3xl leading-tight font-medium uppercase md:text-5xl'>
+                                From the Degustazione to the Margherita
+                            </h2>
+                        </Reveal>
+                        <Reveal className='mt-10'>
+                            <div className='border border-white/15 p-8 md:p-10'>
+                                <div className='flex flex-wrap items-baseline justify-between gap-4'>
+                                    <h3 className='font-display text-2xl font-medium uppercase md:text-3xl'>
+                                        Degustazione · Tasting Menu
+                                    </h3>
+                                    <span className='text-lg text-white/80'>180 per person</span>
+                                </div>
+                                <p className='mt-4 max-w-2xl leading-relaxed text-white/60'>
+                                    Eight courses through the world of Martucci: from the Insalata di Funghi Assoluti
+                                    and Tortelli Cacio e Pepe to A5 Wagyu alla Brace, the two-temperature Futuro di
+                                    Marinara and Sichuan gelato. Sommelier-selected wine pairing, 100.
+                                </p>
+                            </div>
+                        </Reveal>
+                        <Reveal className='mt-12'>
+                            <MenuTabs />
+                        </Reveal>
+                        <Reveal className='mt-12'>
+                            <div className='flex flex-wrap items-center gap-6'>
+                                <CallButton />
+                                <a
                                     href='https://www.martuccimiami.com/menu'
                                     target='_blank'
                                     rel='noopener noreferrer'
-                                    className='inline-block border border-white/60 px-8 py-4 text-sm font-bold tracking-[0.2em] text-white transition-colors duration-300 hover:bg-white hover:text-black'>
-                                    VIEW FULL MENU
+                                    className='text-xs font-bold tracking-[0.25em] text-white/60 uppercase underline underline-offset-8 transition-colors hover:text-white'>
+                                    Cocktail Menu
                                 </a>
                             </div>
                         </Reveal>
