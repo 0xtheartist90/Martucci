@@ -363,27 +363,6 @@ const Page = () => {
                         <p className='mt-6 max-w-xs text-sm leading-relaxed text-white/50 italic'>
                             &ldquo;For me, pizza is far more than just food. It is my passion, my craft, my life.&rdquo;
                         </p>
-                        <a
-                            href='https://www.instagram.com/martucci_miami/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            aria-label='Follow Francesco Martucci on Instagram'
-                            className='mt-6 inline-block text-white/60 transition-colors hover:text-white'>
-                            <svg
-                                width='22'
-                                height='22'
-                                viewBox='0 0 24 24'
-                                fill='none'
-                                stroke='currentColor'
-                                strokeWidth='1.7'
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                aria-hidden='true'>
-                                <rect x='2' y='2' width='20' height='20' rx='5' />
-                                <circle cx='12' cy='12' r='4.5' />
-                                <circle cx='17.2' cy='6.8' r='0.8' fill='currentColor' stroke='none' />
-                            </svg>
-                        </a>
                     </div>
                     <div>
                         <div className='mb-4 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>Hours</div>
@@ -436,6 +415,29 @@ const Page = () => {
                                     href='mailto:info@martuccimiami.com'
                                     className='text-white/70 transition-colors hover:text-white'>
                                     info@martuccimiami.com
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='https://www.instagram.com/martucci_miami/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    aria-label='Follow Francesco Martucci on Instagram'
+                                    className='mt-1 inline-block text-white/60 transition-colors hover:text-white'>
+                                    <svg
+                                        width='20'
+                                        height='20'
+                                        viewBox='0 0 24 24'
+                                        fill='none'
+                                        stroke='currentColor'
+                                        strokeWidth='1.7'
+                                        strokeLinecap='round'
+                                        strokeLinejoin='round'
+                                        aria-hidden='true'>
+                                        <rect x='2' y='2' width='20' height='20' rx='5' />
+                                        <circle cx='12' cy='12' r='4.5' />
+                                        <circle cx='17.2' cy='6.8' r='0.8' fill='currentColor' stroke='none' />
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
