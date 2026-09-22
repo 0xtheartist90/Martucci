@@ -381,21 +381,21 @@ const Page = () => {
                     <div>
                         <div className='mb-4 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>Hours</div>
                         <ul className='space-y-2 text-sm leading-relaxed text-white/70'>
-                            <li className='flex justify-between gap-4'>
-                                <span>Mon – Tue</span>
-                                <span className='text-white/40'>Closed</span>
+                            <li className='flex gap-2'>
+                                <span className='w-20 shrink-0 text-white/45'>Mon – Tue</span>
+                                <span className='text-white/45'>Closed</span>
                             </li>
-                            <li className='flex justify-between gap-4'>
-                                <span>Wed – Thu</span>
-                                <span>5:00 – 10:30 PM</span>
+                            <li className='flex gap-2'>
+                                <span className='w-20 shrink-0 text-white/45'>Wed – Thu</span>
+                                <span className='whitespace-nowrap'>5:00–10:30 PM</span>
                             </li>
-                            <li className='flex justify-between gap-4'>
-                                <span>Fri – Sat</span>
-                                <span>5:00 – 11:30 PM</span>
+                            <li className='flex gap-2'>
+                                <span className='w-20 shrink-0 text-white/45'>Fri – Sat</span>
+                                <span className='whitespace-nowrap'>5:00–11:30 PM</span>
                             </li>
-                            <li className='flex justify-between gap-4'>
-                                <span>Sun</span>
-                                <span>5:00 – 10:30 PM</span>
+                            <li className='flex gap-2'>
+                                <span className='w-20 shrink-0 text-white/45'>Sun</span>
+                                <span className='whitespace-nowrap'>5:00–10:30 PM</span>
                             </li>
                         </ul>
                     </div>
