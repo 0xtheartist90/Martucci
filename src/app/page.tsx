@@ -5,13 +5,13 @@ import Reveal from '@/components/reveal';
 const OPENTABLE_URL = 'https://www.opentable.com/r/francesco-martucci-miami-beach';
 
 const AWARDS = [
-    { quote: 'NUMBER 1 — THE BEST PIZZERIA IN THE WORLD', source: '50 TOP PIZZA WORLD 2025' },
+    { quote: 'NUMBER 1, THE BEST PIZZERIA IN THE WORLD', source: '50 TOP PIZZA WORLD 2025' },
     { quote: 'NUMBER 1 PIZZERIA IN ITALY, 7 YEARS RUNNING', source: '50 TOP PIZZA ITALIA 2019–2025' },
     { quote: 'HONORED WITH THE TITLE OF “MAESTRO DELLA PIZZA”', source: 'IDENTITÀ GOLOSE 2025' },
     { quote: 'BEST PIZZA CHEF IN THE WORLD', source: '50 TOP PIZZA' },
-    { quote: 'THREE SLICES — BEST RATING 2017–2025', source: 'GAMBERO ROSSO' },
+    { quote: 'THREE SLICES, BEST RATING 2017–2025', source: 'GAMBERO ROSSO' },
     { quote: 'FIRST PIZZA RESTAURANT EVER IN THE WORLD TOP 20', source: 'AMERICAN FOOD BIBLE' },
-    { quote: 'BEST PIZZA IN THE WORLD — “FUTURO DI MARINARA”', source: '50 TOP PIZZA' },
+    { quote: 'BEST PIZZA IN THE WORLD WITH “FUTURO DI MARINARA”', source: '50 TOP PIZZA' },
     { quote: 'BEST PIZZA DOUGH 2020', source: 'GAMBERO ROSSO' },
     { quote: '100 FORBES EXCELLENCES 2021', source: 'FORBES' }
 ];
@@ -75,11 +75,11 @@ const RESTAURANT_SHOTS = [
 const CRAFT = [
     {
         title: 'The Dough',
-        text: 'Long-fermented and highly hydrated for an ultra-light, airy crust — handled with the precision that made it famous in Caserta.'
+        text: 'Long-fermented and highly hydrated for an ultra-light, airy crust, handled with the precision that made it famous in Caserta.'
     },
     {
         title: 'The Ingredients',
-        text: 'Buffalo mozzarella from Campania, heirloom tomatoes and seasonal Florida produce — the finest of Italy, accented with Miami flavor.'
+        text: 'Buffalo mozzarella from Campania, heirloom tomatoes and seasonal Florida produce. The finest of Italy, accented with Miami flavor.'
     },
     {
         title: 'The Oven',
@@ -87,7 +87,7 @@ const CRAFT = [
     },
     {
         title: 'The Experience',
-        text: 'From signature classics to the multi-course “Degustazione” pizza tasting menu — pizza re-imagined, shared among friends.'
+        text: 'From signature classics to the multi-course “Degustazione” pizza tasting menu. Pizza re-imagined, shared among friends.'
     }
 ];
 
@@ -137,7 +137,7 @@ const Page = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
                 <div className='relative z-10 w-full px-6 pt-32 pb-16 md:px-12 md:pb-24'>
                     <div className='mb-6 inline-block border border-white/40 px-4 py-2 text-[11px] font-bold tracking-[0.25em] text-white/90 uppercase'>
-                        #1 Pizzeria in the World — 50 Top Pizza 2025
+                        #1 Pizzeria in the World · 50 Top Pizza 2025
                     </div>
                     <h1 className='font-display max-w-4xl text-5xl leading-[1.05] font-medium tracking-tight uppercase md:text-7xl lg:text-8xl'>
                         Wood-Fired
@@ -147,7 +147,7 @@ const Page = () => {
                         in Wynwood
                     </h1>
                     <p className='mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg'>
-                        The legendary pizza of Caserta, Italy — long-fermented, wood-fired and ultra-light — now in the
+                        The legendary pizza of Caserta, Italy: long-fermented, wood-fired and ultra-light, now in the
                         heart of Miami. Tables fill fast. Reserve yours tonight.
                     </p>
                     <div className='mt-8'>
@@ -185,13 +185,13 @@ const Page = () => {
                         <SectionLabel>/THE PIZZA</SectionLabel>
                         <p className='mt-4 text-sm leading-relaxed text-white/70'>
                             Every pizza starts with dough fermented for days, the finest Italian ingredients and a
-                            roaring wood fire — finished in ninety seconds, served in minutes.
+                            roaring wood fire, finished in ninety seconds and served in minutes.
                         </p>
                     </div>
                     <div>
                         <Reveal>
                             <h2 className='font-display max-w-3xl text-3xl leading-tight font-medium uppercase md:text-5xl'>
-                                Pizza from the world&rsquo;s #1 pizzeria — fired to perfection
+                                Pizza from the world&rsquo;s #1 pizzeria, fired to perfection
                             </h2>
                         </Reveal>
                         <div className='mt-12 grid grid-cols-2 gap-4 md:grid-cols-6'>
@@ -276,7 +276,7 @@ const Page = () => {
                     <div className='md:sticky md:top-28 md:self-start'>
                         <SectionLabel>/THE RESTAURANT</SectionLabel>
                         <p className='mt-4 text-sm leading-relaxed text-white/70'>
-                            An intimate dining room in the heart of Wynwood — wood-fired hearth, full bar and a
+                            An intimate dining room in the heart of Wynwood with a wood-fired hearth, full bar and a
                             floor-to-ceiling wine wall.
                         </p>
                     </div>
@@ -320,11 +320,11 @@ const Page = () => {
                             />
                             <div>
                                 <p className='max-w-xl text-lg leading-relaxed text-white/80'>
-                                    Behind every pizza stands Francesco Martucci of Pizzeria I Masanielli, Caserta —
+                                    Behind every pizza stands Francesco Martucci of Pizzeria I Masanielli, Caserta,
                                     named the world&rsquo;s best pizza chef. His craft, now fired nightly in Wynwood.
                                 </p>
                                 <p className='mt-3 text-xs tracking-[0.2em] text-[#929292] uppercase'>
-                                    Francesco Martucci — Chef &amp; Pizzaiolo
+                                    Francesco Martucci · Chef &amp; Pizzaiolo
                                 </p>
                             </div>
                         </div>

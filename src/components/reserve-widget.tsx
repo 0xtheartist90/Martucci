@@ -35,7 +35,7 @@ const ReserveWidget = () => {
         e.preventDefault();
         const day = new Date(`${date}T12:00:00`).getDay();
         if (CLOSED_DAYS.includes(day)) {
-            setWarning('We are closed on Mondays and Tuesdays — please pick another day.');
+            setWarning('We are closed on Mondays and Tuesdays. Please pick another day.');
 
             return;
         }
@@ -83,7 +83,7 @@ const ReserveWidget = () => {
                 </button>
             </div>
             <p className='mt-3 text-xs tracking-[0.15em] text-white/60 uppercase'>
-                {warning || 'Powered by OpenTable — free online reservations'}
+                {warning || 'Powered by OpenTable · free online reservations'}
             </p>
         </form>
     );
