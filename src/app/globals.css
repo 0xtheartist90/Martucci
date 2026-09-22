@@ -197,3 +197,61 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ─── Martucci landing page ─────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'neue-haas-grotesk-display';
+  src: url(https://use.typekit.net/af/2724c2/00000000000000007735bb48/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'neue-haas-grotesk-display';
+  src: url(https://use.typekit.net/af/174ae3/00000000000000007735bb5a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'neue-haas-grotesk-display';
+  src: url(https://use.typekit.net/af/c7a282/00000000000000007735bb62/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+.martucci-body {
+  background-color: #000;
+  color: #fff;
+  font-family: var(--font-lato), 'Lato', sans-serif;
+}
+
+.font-display {
+  font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Awards marquee */
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.marquee-track {
+  animation: marquee-scroll 60s linear infinite;
+  will-change: transform;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
