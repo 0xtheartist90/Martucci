@@ -1,8 +1,7 @@
 import HeroVideo from '@/components/hero-video';
-import ReserveWidget from '@/components/reserve-widget';
+import LightboxImage from '@/components/lightbox-image';
+import OpenTableWidget from '@/components/opentable-widget';
 import Reveal from '@/components/reveal';
-
-const OPENTABLE_URL = 'https://www.opentable.com/r/francesco-martucci-miami-beach';
 
 const AWARDS = [
     { quote: 'NUMBER 1, THE BEST PIZZERIA IN THE WORLD', source: '50 TOP PIZZA WORLD 2025' },
@@ -50,26 +49,26 @@ const PIZZAS = [
     }
 ];
 
-// Mosaic on a fixed row grid: the oven shot runs tall down the left, wide room shots span two columns.
+// Masonry columns keep every photo at its natural aspect ratio, nothing gets cropped.
 const RESTAURANT_SHOTS = [
     {
         src: '/images/Martucci/Francesco%20(9).webp',
-        alt: 'Wood-fired pizza on a peel beside the glowing hearth at Francesco Martucci Wynwood',
-        cell: 'row-span-2'
+        alt: 'Wood-fired pizza on a peel beside the glowing hearth at Francesco Martucci Wynwood'
     },
-    { src: '/images/cdn/dining-room.jpg', alt: 'Dining room of Francesco Martucci in Wynwood, Miami', cell: 'col-span-2' },
+    { src: '/images/restaurant-2.jpg', alt: 'Dining room with colorful murals and timber columns at Francesco Martucci Wynwood' },
+    { src: '/images/restaurant-4.jpg', alt: 'Backlit bar with leather seating at Francesco Martucci Wynwood' },
     {
         src: '/images/Martucci/Francesco%20(1).webp',
-        alt: 'Intimate dining tables beneath hanging greenery at Francesco Martucci Wynwood',
-        cell: ''
+        alt: 'Intimate dining tables beneath hanging greenery at Francesco Martucci Wynwood'
     },
+    { src: '/images/restaurant-3.jpg', alt: 'Cozy corner banquette under exposed wooden beams at Francesco Martucci' },
+    { src: '/images/cdn/wine-wall.jpg', alt: 'Floor-to-ceiling wine wall at Francesco Martucci Miami' },
     {
         src: '/images/Martucci/Francesco%20(8).webp',
-        alt: 'Pizzaiolo sliding a fresh pizza from the wooden peel at Francesco Martucci',
-        cell: ''
+        alt: 'Pizzaiolo sliding a fresh pizza from the wooden peel at Francesco Martucci'
     },
-    { src: '/images/cdn/dining-room-2.jpg', alt: 'Warm industrial dining room with wood tables in Wynwood', cell: 'col-span-2' },
-    { src: '/images/cdn/wine-wall.jpg', alt: 'Floor-to-ceiling wine wall at Francesco Martucci Miami', cell: '' }
+    { src: '/images/restaurant-1.jpg', alt: 'Private dining room with chandelier and framed art at Francesco Martucci' },
+    { src: '/images/restaurant-5.jpg', alt: 'View across the bar toward the open kitchen at Francesco Martucci Wynwood' }
 ];
 
 const CRAFT = [
@@ -91,11 +90,9 @@ const CRAFT = [
     }
 ];
 
-const ReserveButton = ({ label = 'RESERVE A TABLE', className = '' }: { label?: string; className?: string }) => (
+const CallButton = ({ label = 'CALL TO RESERVE', className = '' }: { label?: string; className?: string }) => (
     <a
-        href={OPENTABLE_URL}
-        target='_blank'
-        rel='noopener noreferrer'
+        href='tel:+17542195694'
         className={`inline-block border border-white bg-white px-8 py-4 text-sm font-bold tracking-[0.2em] text-black transition-colors duration-300 hover:bg-transparent hover:text-white ${className}`}>
         {label}
     </a>
@@ -111,20 +108,11 @@ const Page = () => {
             {/* ── Navigation ─────────────────────────────── */}
             <nav className='fixed top-0 z-50 flex w-full items-center justify-between bg-black/70 px-6 py-4 backdrop-blur-md md:px-12'>
                 <img src={'/images/cdn/martucci-logo.png'} alt='Francesco Martucci' className='h-10 w-auto md:h-12' />
-                <div className='flex items-center gap-6'>
-                    <a
-                        href='tel:+17542195694'
-                        className='hidden border border-white/40 px-5 py-2.5 text-xs font-bold tracking-[0.2em] text-white/90 uppercase transition-colors duration-300 hover:border-white hover:text-white md:block'>
-                        Call Us
-                    </a>
-                    <a
-                        href={OPENTABLE_URL}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='border border-white px-5 py-2.5 text-xs font-bold tracking-[0.2em] text-white transition-colors duration-300 hover:bg-white hover:text-black'>
-                        RESERVE A TABLE
-                    </a>
-                </div>
+                <a
+                    href='tel:+17542195694'
+                    className='border border-white px-5 py-2.5 text-xs font-bold tracking-[0.2em] text-white transition-colors duration-300 hover:bg-white hover:text-black'>
+                    CALL TO RESERVE
+                </a>
             </nav>
 
             {/* ── Hero ───────────────────────────────────── */}
@@ -149,7 +137,7 @@ const Page = () => {
                         fast. Reserve yours tonight.
                     </p>
                     <div className='mt-8'>
-                        <ReserveWidget />
+                        <OpenTableWidget />
                     </div>
                 </div>
             </section>
@@ -191,10 +179,9 @@ const Page = () => {
                             {PIZZAS.map((pizza, i) => (
                                 <Reveal key={pizza.src} delay={i * 100} className={pizza.cell}>
                                     <div className='h-full w-full overflow-hidden'>
-                                        <img
+                                        <LightboxImage
                                             src={pizza.src}
                                             alt={pizza.alt}
-                                            loading='lazy'
                                             className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
                                         />
                                     </div>
@@ -203,7 +190,7 @@ const Page = () => {
                         </div>
                         <Reveal className='mt-10'>
                             <div className='flex flex-wrap gap-4'>
-                                <ReserveButton />
+                                <CallButton />
                                 <a
                                     href='https://www.martuccimiami.com/menu'
                                     target='_blank'
@@ -242,18 +229,16 @@ const Page = () => {
                         <Reveal className='mt-10'>
                             <div className='grid gap-4 sm:grid-cols-2'>
                                 <div className='aspect-[4/3] overflow-hidden'>
-                                    <img
+                                    <LightboxImage
                                         src='/images/Martucci/Francesco%20(3).webp'
                                         alt='Slice of wood-fired pizza with olives presented on a sculpted hand'
-                                        loading='lazy'
                                         className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
                                     />
                                 </div>
                                 <div className='aspect-[4/3] overflow-hidden'>
-                                    <img
+                                    <LightboxImage
                                         src='/images/Martucci/Francesco%20(5).webp'
                                         alt='Slice of Neapolitan pizza with melted mozzarella and basil on a black plate'
-                                        loading='lazy'
                                         className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
                                     />
                                 </div>
@@ -279,15 +264,14 @@ const Page = () => {
                                 Wood-fired tradition meets South Florida
                             </h2>
                         </Reveal>
-                        <div className='mt-12 grid auto-rows-[180px] grid-cols-2 gap-4 md:auto-rows-[260px] md:grid-cols-3'>
+                        <div className='mt-12 columns-2 gap-4 md:columns-3'>
                             {RESTAURANT_SHOTS.map((shot, i) => (
-                                <Reveal key={shot.src} delay={i * 80} className={shot.cell}>
-                                    <div className='h-full w-full overflow-hidden'>
-                                        <img
+                                <Reveal key={shot.src} delay={i * 60} className='mb-4 break-inside-avoid'>
+                                    <div className='overflow-hidden'>
+                                        <LightboxImage
                                             src={shot.src}
                                             alt={shot.alt}
-                                            loading='lazy'
-                                            className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
+                                            className='h-auto w-full transition-transform duration-700 hover:scale-105'
                                         />
                                     </div>
                                 </Reveal>
@@ -309,10 +293,9 @@ const Page = () => {
                     <Reveal>
                         <div className='grid items-center gap-10 md:grid-cols-[260px_1fr] md:gap-12 lg:grid-cols-[360px_1fr] lg:gap-14'>
                             <div className='overflow-hidden'>
-                                <img
+                                <LightboxImage
                                     src='/images/Martucci/Francesco%20(4).webp'
                                     alt='Chef Francesco Martucci working the pass in his Wynwood kitchen'
-                                    loading='lazy'
                                     className='aspect-[4/5] w-full object-cover grayscale transition-transform duration-700 hover:scale-105'
                                 />
                             </div>
@@ -353,10 +336,10 @@ const Page = () => {
                             Your table in Wynwood is waiting
                         </h2>
                         <p className='mx-auto mt-6 max-w-xl leading-relaxed text-white/80'>
-                            Open Wednesday through Sunday from 5:00 PM. Book online in seconds via OpenTable.
+                            Open Wednesday through Sunday from 5:00 PM. Call us and we will set your table.
                         </p>
                         <div className='mt-10 flex justify-center'>
-                            <ReserveWidget />
+                            <CallButton label='CALL 754-219-5694' />
                         </div>
                     </Reveal>
                 </div>

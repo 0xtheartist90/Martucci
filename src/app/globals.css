@@ -255,3 +255,6 @@
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+/* OpenTable widget */
+.ot-dtp-picker .ot-title { display: none !important; }
