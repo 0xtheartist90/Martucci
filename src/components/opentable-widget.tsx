@@ -51,7 +51,7 @@ const OpenTableWidget = () => {
         };
     }, []);
 
-    return <div ref={ref} className='w-full max-w-3xl' />;
+    return <div ref={ref} className='flex w-full max-w-3xl justify-center md:justify-start' />;
 };
 
 export default OpenTableWidget;
