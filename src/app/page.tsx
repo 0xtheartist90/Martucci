@@ -393,8 +393,8 @@ const Page = () => {
 
             {/* ── Footer ─────────────────────────────────── */}
             <footer className='border-t border-white/10 px-6 pt-16 pb-8 text-center md:px-12 md:pt-20 md:text-left'>
-                <div className='grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8'>
-                    <div>
+                <div className='grid grid-cols-2 gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8'>
+                    <div className='col-span-2 md:col-span-1'>
                         <h3 className='font-display text-3xl leading-[1.1] font-medium uppercase md:text-4xl'>
                             Francesco
                             <br />
@@ -406,7 +406,7 @@ const Page = () => {
                             &ldquo;For me, pizza is far more than just food. It is my passion, my craft, my life.&rdquo;
                         </p>
                     </div>
-                    <div>
+                    <div className='col-span-2 md:col-span-1'>
                         <div className='mb-4 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>Hours</div>
                         <ul className='mx-auto w-fit space-y-2 text-sm leading-relaxed text-white/70 md:mx-0'>
                             <li className='flex gap-2'>
