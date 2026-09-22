@@ -130,9 +130,9 @@ const Page = () => {
             {/* ── Hero ───────────────────────────────────── */}
             <section className='relative flex min-h-svh items-end overflow-hidden'>
                 <HeroVideo
-                    mp4='/video/martucci-pizza.mp4'
-                    webm='/video/martucci-pizza.webm'
-                    poster='/video/martucci-pizza-poster.jpg'
+                    mp4='/video/francesco-hero.mp4'
+                    webm='/video/francesco-hero.webm'
+                    poster='/video/francesco-hero-poster.jpg'
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
                 <div className='relative z-10 w-full px-6 pt-32 pb-16 md:px-12 md:pb-24'>
