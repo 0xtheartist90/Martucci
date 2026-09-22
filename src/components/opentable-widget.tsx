@@ -14,7 +14,16 @@ const OpenTableWidget = () => {
         if (!document.getElementById('ot-widget-overrides')) {
             const style = document.createElement('style');
             style.id = 'ot-widget-overrides';
-            style.textContent = '.ot-dtp-picker .ot-title{display:none!important}';
+            style.textContent = [
+                '.ot-dtp-picker .ot-title{display:none!important}',
+                // The wide theme lays its fields out side by side at a fixed width;
+                // stack them full-width on phones so nothing runs off screen.
+                '@media (max-width:767px){',
+                '.ot-dtp-picker.wide{width:100%!important;max-width:100%!important;min-width:0!important}',
+                '.ot-dtp-picker.wide .ot-dtp-picker-form{width:100%!important}',
+                '.ot-dtp-picker.wide .ot-dtp-picker-selector,.ot-dtp-picker.wide .ot-dtp-picker-button{display:block!important;width:100%!important;max-width:100%!important;margin:0 0 8px 0!important}',
+                '}'
+            ].join('');
             document.head.appendChild(style);
         }
         // The loader inserts a widget container every time it executes, which under
