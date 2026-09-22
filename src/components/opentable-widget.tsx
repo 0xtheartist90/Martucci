@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 
-const LOADER_SRC =
-    'https://www.opentable.com/widget/reservation/loader?rid=1435684&type=standard&theme=wide&color=8&dark=true&iframe=false&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website&font=arialBlack&ot_logo=standard&primary_color=000000&primary_font_color=ffffff&button_color=383838&button_font_color=ffffff&cfe=true';
+// Same loader parameters; the wide theme on desktop, OpenTable's own standard (compact) theme on phones.
+const loaderSrc = (theme: 'wide' | 'standard') =>
+    `https://www.opentable.com/widget/reservation/loader?rid=1435684&type=standard&theme=${theme}&color=8&dark=true&iframe=false&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website&font=arialBlack&ot_logo=standard&primary_color=000000&primary_font_color=ffffff&button_color=383838&button_font_color=ffffff&cfe=true`;
 
 const OpenTableWidget = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -36,9 +37,10 @@ const OpenTableWidget = () => {
         observer.observe(el, { childList: true, subtree: true });
         dedupe();
         if (!el.querySelector('[id^="ot-widget-container"], script')) {
+            const theme = window.matchMedia('(max-width: 767px)').matches ? 'standard' : 'wide';
             const script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = LOADER_SRC;
+            script.src = loaderSrc(theme);
             script.async = true;
             el.appendChild(script);
         }
