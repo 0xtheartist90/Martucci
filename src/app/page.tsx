@@ -133,18 +133,9 @@ const Page = () => {
                     />
                     <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
                     <div className='relative z-10 w-full px-6 pt-28 pb-10 md:px-12 md:pt-32 md:pb-44'>
-                        <div className='mb-5 text-[11px] font-bold tracking-[0.3em] text-white/60 uppercase'>
+                        <h1 className='text-xs font-bold tracking-[0.3em] text-white/90 uppercase md:text-sm'>
                             #1 Pizzeria in the World · 50 Top Pizza 2025
-                        </div>
-                        <h1 className='font-display max-w-3xl text-4xl leading-[1.12] font-normal md:text-5xl lg:text-6xl'>
-                            Wood-fired Neapolitan pizza,
-                            <br />
-                            from Caserta to Wynwood.
                         </h1>
-                        <p className='mt-5 max-w-lg text-base leading-relaxed text-white/75'>
-                            Long-fermented, ultra-light and fired in ninety seconds, in the heart of Miami. Tables
-                            fill fast. Reserve yours tonight.
-                        </p>
                     </div>
                 </div>
                 {/* Below the video on phones; pulled up over it on larger screens. */}
@@ -175,7 +166,7 @@ const Page = () => {
                 <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
                     <div className='md:sticky md:top-28 md:self-start'>
                         <SectionLabel>/THE PIZZA</SectionLabel>
-                        <p className='mt-4 text-sm leading-relaxed text-white/70'>
+                        <p className='mt-4 hidden text-sm leading-relaxed text-white/70 md:block'>
                             Every pizza starts with dough fermented for days, the finest Italian ingredients and a
                             roaring wood fire, finished in ninety seconds and served in minutes.
                         </p>
@@ -208,7 +199,7 @@ const Page = () => {
                 <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
                     <div className='md:sticky md:top-28 md:self-start'>
                         <SectionLabel>/THE MENU</SectionLabel>
-                        <p className='mt-4 text-sm leading-relaxed text-white/70'>
+                        <p className='mt-4 hidden text-sm leading-relaxed text-white/70 md:block'>
                             Two-temperature signature pizzas, wood-fired classics, handmade pasta and dolci. Menu
                             changes with the seasons.
                         </p>
@@ -258,7 +249,7 @@ const Page = () => {
                 <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
                     <div className='md:sticky md:top-28 md:self-start'>
                         <SectionLabel>/THE CRAFT</SectionLabel>
-                        <p className='mt-4 text-sm leading-relaxed text-white/70'>
+                        <p className='mt-4 hidden text-sm leading-relaxed text-white/70 md:block'>
                             At Francesco Martucci Wynwood, every element is crafted with care.
                         </p>
                     </div>
@@ -302,7 +293,7 @@ const Page = () => {
                 <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
                     <div className='md:sticky md:top-28 md:self-start'>
                         <SectionLabel>/THE RESTAURANT</SectionLabel>
-                        <p className='mt-4 text-sm leading-relaxed text-white/70'>
+                        <p className='mt-4 hidden text-sm leading-relaxed text-white/70 md:block'>
                             An intimate dining room in the heart of Wynwood with a wood-fired hearth, full bar and a
                             floor-to-ceiling wine wall.
                         </p>
@@ -335,7 +326,7 @@ const Page = () => {
                 <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
                     <div className='md:sticky md:top-28 md:self-start'>
                         <SectionLabel>/THE CHEF</SectionLabel>
-                        <p className='mt-4 text-sm leading-relaxed text-white/70'>
+                        <p className='mt-4 hidden text-sm leading-relaxed text-white/70 md:block'>
                             The craft of Caserta, fired nightly in Wynwood.
                         </p>
                     </div>
