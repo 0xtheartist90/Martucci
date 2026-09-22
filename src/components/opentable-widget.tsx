@@ -10,20 +10,34 @@ const OpenTableWidget = () => {
 
     useEffect(() => {
         const el = ref.current;
-        if (!el || el.childElementCount > 0) return;
+        if (!el) return;
         if (!document.getElementById('ot-widget-overrides')) {
             const style = document.createElement('style');
             style.id = 'ot-widget-overrides';
             style.textContent = '.ot-dtp-picker .ot-title{display:none!important}';
             document.head.appendChild(style);
         }
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = LOADER_SRC;
-        script.async = true;
-        el.appendChild(script);
+        // The loader inserts a widget container every time it executes, which under
+        // StrictMode/Fast Refresh can stack duplicates. Keep only the first container.
+        const dedupe = () => {
+            const containers = el.querySelectorAll('[id^="ot-widget-container"]');
+            for (let i = 1; i < containers.length; i++) containers[i].remove();
+        };
+        const observer = new MutationObserver(dedupe);
+        observer.observe(el, { childList: true, subtree: true });
+        dedupe();
+        if (!el.querySelector('[id^="ot-widget-container"], script')) {
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = LOADER_SRC;
+            script.async = true;
+            el.appendChild(script);
+        }
 
-        return () => el.replaceChildren();
+        return () => {
+            observer.disconnect();
+            el.replaceChildren();
+        };
     }, []);
 
     return <div ref={ref} className='w-full max-w-3xl' />;
