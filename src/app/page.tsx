@@ -395,7 +395,7 @@ const Page = () => {
             </section>
 
             {/* ── Footer ─────────────────────────────────── */}
-            <footer className='border-t border-white/10 px-6 pt-16 pb-8 md:px-12 md:pt-20'>
+            <footer className='border-t border-white/10 px-6 pt-16 pb-8 text-center md:px-12 md:pt-20 md:text-left'>
                 <div className='grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8'>
                     <div>
                         <h3 className='font-display text-3xl leading-[1.1] font-medium uppercase md:text-4xl'>
@@ -405,13 +405,13 @@ const Page = () => {
                             <br />
                             Wynwood
                         </h3>
-                        <p className='mt-6 max-w-xs text-sm leading-relaxed text-white/50 italic'>
+                        <p className='mx-auto mt-6 max-w-xs text-sm leading-relaxed text-white/50 italic md:mx-0'>
                             &ldquo;For me, pizza is far more than just food. It is my passion, my craft, my life.&rdquo;
                         </p>
                     </div>
                     <div>
                         <div className='mb-4 text-xs font-bold tracking-[0.25em] text-[#929292] uppercase'>Hours</div>
-                        <ul className='space-y-2 text-sm leading-relaxed text-white/70'>
+                        <ul className='mx-auto w-fit space-y-2 text-sm leading-relaxed text-white/70 md:mx-0'>
                             <li className='flex gap-2'>
                                 <span className='w-20 shrink-0 text-white/45'>Mon – Tue</span>
                                 <span className='text-white/45'>Closed</span>
