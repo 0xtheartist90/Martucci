@@ -55,7 +55,7 @@ const RESTAURANT_SHOTS = [
     {
         src: '/images/Martucci/Francesco%20(9).webp',
         alt: 'Wood-fired pizza on a peel beside the glowing hearth at Francesco Martucci Wynwood',
-        cell: 'row-span-2'
+        cell: 'col-span-2 row-span-2 md:col-span-1'
     },
     {
         src: '/images/restaurant-2.jpg',
@@ -124,29 +124,32 @@ const Page = () => {
             </nav>
 
             {/* ── Hero ───────────────────────────────────── */}
-            <section className='relative flex min-h-svh items-end overflow-hidden'>
-                <HeroVideo
-                    mp4='/video/francesco-hero.mp4'
-                    webm='/video/francesco-hero.webm'
-                    poster='/video/francesco-hero-poster.jpg'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
-                <div className='relative z-10 w-full px-6 pt-32 pb-16 md:px-12 md:pb-24'>
-                    <div className='mb-5 text-[11px] font-bold tracking-[0.3em] text-white/60 uppercase'>
-                        #1 Pizzeria in the World · 50 Top Pizza 2025
+            <section className='relative'>
+                <div className='relative flex min-h-svh items-end overflow-hidden'>
+                    <HeroVideo
+                        mp4='/video/francesco-hero.mp4'
+                        webm='/video/francesco-hero.webm'
+                        poster='/video/francesco-hero-poster.jpg'
+                    />
+                    <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
+                    <div className='relative z-10 w-full px-6 pt-28 pb-10 md:px-12 md:pt-32 md:pb-44'>
+                        <div className='mb-5 text-[11px] font-bold tracking-[0.3em] text-white/60 uppercase'>
+                            #1 Pizzeria in the World · 50 Top Pizza 2025
+                        </div>
+                        <h1 className='font-display max-w-3xl text-4xl leading-[1.12] font-normal md:text-5xl lg:text-6xl'>
+                            Wood-fired Neapolitan pizza,
+                            <br />
+                            from Caserta to Wynwood.
+                        </h1>
+                        <p className='mt-5 max-w-lg text-base leading-relaxed text-white/75'>
+                            Long-fermented, ultra-light and fired in ninety seconds, in the heart of Miami. Tables
+                            fill fast. Reserve yours tonight.
+                        </p>
                     </div>
-                    <h1 className='font-display max-w-3xl text-4xl leading-[1.12] font-normal md:text-5xl lg:text-6xl'>
-                        Wood-fired Neapolitan pizza,
-                        <br />
-                        from Caserta to Wynwood.
-                    </h1>
-                    <p className='mt-5 max-w-lg text-base leading-relaxed text-white/75'>
-                        Long-fermented, ultra-light and fired in ninety seconds, in the heart of Miami. Tables fill
-                        fast. Reserve yours tonight.
-                    </p>
-                    <div className='mt-8'>
-                        <OpenTableWidget />
-                    </div>
+                </div>
+                {/* Below the video on phones; pulled up over it on larger screens. */}
+                <div className='relative z-10 px-6 pt-6 pb-2 md:-mt-36 md:px-12 md:pt-0 md:pb-16'>
+                    <OpenTableWidget />
                 </div>
             </section>
 
