@@ -12,7 +12,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-    title: 'Francesco Martucci | Wood-Fired Neapolitan Pizza in Wynwood, Miami',
+    title: 'Francesco Martucci | Wood-Fired Pizza · Wynwood, Miami',
     description:
         "Taste pizza from the world's #1 pizzeria: long-fermented, wood-fired Neapolitan pizza in the heart of Wynwood, Miami. Reserve your table tonight.",
     icons: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         apple: '/favicon-256.jpg'
     },
     openGraph: {
-        title: 'Francesco Martucci | Wood-Fired Neapolitan Pizza in Wynwood, Miami',
+        title: 'Francesco Martucci | Wood-Fired Pizza · Wynwood, Miami',
         description:
             "Taste pizza from the world's #1 pizzeria: long-fermented, wood-fired Neapolitan pizza in the heart of Wynwood, Miami. Reserve your table tonight.",
         images: [
