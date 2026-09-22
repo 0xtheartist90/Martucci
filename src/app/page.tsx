@@ -49,26 +49,33 @@ const PIZZAS = [
     }
 ];
 
-// Masonry columns keep every photo at its natural aspect ratio, nothing gets cropped.
+// Mosaic on a fixed row grid: the oven shot runs tall down the left, wide room shots span two columns.
 const RESTAURANT_SHOTS = [
     {
         src: '/images/Martucci/Francesco%20(9).webp',
-        alt: 'Wood-fired pizza on a peel beside the glowing hearth at Francesco Martucci Wynwood'
+        alt: 'Wood-fired pizza on a peel beside the glowing hearth at Francesco Martucci Wynwood',
+        cell: 'row-span-2'
     },
-    { src: '/images/restaurant-2.jpg', alt: 'Dining room with colorful murals and timber columns at Francesco Martucci Wynwood' },
-    { src: '/images/restaurant-4.jpg', alt: 'Backlit bar with leather seating at Francesco Martucci Wynwood' },
+    {
+        src: '/images/restaurant-2.jpg',
+        alt: 'Dining room with colorful murals and timber columns at Francesco Martucci Wynwood',
+        cell: 'col-span-2'
+    },
+    { src: '/images/restaurant-3.jpg', alt: 'Cozy corner banquette under exposed wooden beams at Francesco Martucci', cell: '' },
     {
         src: '/images/Martucci/Francesco%20(1).webp',
-        alt: 'Intimate dining tables beneath hanging greenery at Francesco Martucci Wynwood'
+        alt: 'Intimate dining tables beneath hanging greenery at Francesco Martucci Wynwood',
+        cell: ''
     },
-    { src: '/images/restaurant-3.jpg', alt: 'Cozy corner banquette under exposed wooden beams at Francesco Martucci' },
-    { src: '/images/cdn/wine-wall.jpg', alt: 'Floor-to-ceiling wine wall at Francesco Martucci Miami' },
+    { src: '/images/restaurant-4.jpg', alt: 'Backlit bar with leather seating at Francesco Martucci Wynwood', cell: 'col-span-2' },
+    { src: '/images/cdn/wine-wall.jpg', alt: 'Floor-to-ceiling wine wall at Francesco Martucci Miami', cell: '' },
     {
         src: '/images/Martucci/Francesco%20(8).webp',
-        alt: 'Pizzaiolo sliding a fresh pizza from the wooden peel at Francesco Martucci'
+        alt: 'Pizzaiolo sliding a fresh pizza from the wooden peel at Francesco Martucci',
+        cell: ''
     },
-    { src: '/images/restaurant-1.jpg', alt: 'Private dining room with chandelier and framed art at Francesco Martucci' },
-    { src: '/images/restaurant-5.jpg', alt: 'View across the bar toward the open kitchen at Francesco Martucci Wynwood' }
+    { src: '/images/restaurant-1.jpg', alt: 'Private dining room with chandelier and framed art at Francesco Martucci', cell: '' },
+    { src: '/images/restaurant-5.jpg', alt: 'View across the bar toward the open kitchen at Francesco Martucci Wynwood', cell: '' }
 ];
 
 const CRAFT = [
@@ -264,14 +271,14 @@ const Page = () => {
                                 Wood-fired tradition meets South Florida
                             </h2>
                         </Reveal>
-                        <div className='mt-12 columns-2 gap-4 md:columns-3'>
+                        <div className='mt-12 grid auto-rows-[180px] grid-cols-2 gap-4 md:auto-rows-[260px] md:grid-cols-3'>
                             {RESTAURANT_SHOTS.map((shot, i) => (
-                                <Reveal key={shot.src} delay={i * 60} className='mb-4 break-inside-avoid'>
-                                    <div className='overflow-hidden'>
+                                <Reveal key={shot.src} delay={i * 60} className={shot.cell}>
+                                    <div className='h-full w-full overflow-hidden'>
                                         <LightboxImage
                                             src={shot.src}
                                             alt={shot.alt}
-                                            className='h-auto w-full transition-transform duration-700 hover:scale-105'
+                                            className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
                                         />
                                     </div>
                                 </Reveal>

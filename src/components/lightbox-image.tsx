@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 const LightboxImage = ({ src, alt, className = '' }: { src: string; alt: string; className?: string }) => {
     const [open, setOpen] = useState(false);
@@ -26,22 +27,24 @@ const LightboxImage = ({ src, alt, className = '' }: { src: string; alt: string;
                 className={`cursor-zoom-in ${className}`}
                 onClick={() => setOpen(true)}
             />
-            {open && (
-                <div
-                    role='dialog'
-                    aria-modal='true'
-                    aria-label={alt}
-                    className='fixed inset-0 z-[100] flex cursor-zoom-out items-center justify-center bg-black/95 p-4 md:p-10'
-                    onClick={() => setOpen(false)}>
-                    <img src={src} alt={alt} className='max-h-full max-w-full object-contain' />
-                    <button
-                        aria-label='Close'
-                        onClick={() => setOpen(false)}
-                        className='absolute top-4 right-6 text-4xl leading-none font-light text-white/70 transition-colors hover:text-white'>
-                        ×
-                    </button>
-                </div>
-            )}
+            {open &&
+                createPortal(
+                    <div
+                        role='dialog'
+                        aria-modal='true'
+                        aria-label={alt}
+                        className='fixed inset-0 z-[100] flex cursor-zoom-out items-center justify-center bg-black'
+                        onClick={() => setOpen(false)}>
+                        <img src={src} alt={alt} className='h-full w-full object-contain' />
+                        <button
+                            aria-label='Close'
+                            onClick={() => setOpen(false)}
+                            className='absolute top-4 right-6 text-4xl leading-none font-light text-white/70 transition-colors hover:text-white'>
+                            ×
+                        </button>
+                    </div>,
+                    document.body
+                )}
         </>
     );
 };
