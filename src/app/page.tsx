@@ -244,16 +244,7 @@ const Page = () => {
                             <MenuTabs />
                         </Reveal>
                         <Reveal className='mt-12'>
-                            <div className='flex flex-wrap items-center gap-6'>
-                                <CallButton />
-                                <a
-                                    href='https://www.martuccimiami.com/menu'
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    className='text-xs font-bold tracking-[0.25em] text-white/60 uppercase underline underline-offset-8 transition-colors hover:text-white'>
-                                    Cocktail Menu
-                                </a>
-                            </div>
+                            <CallButton />
                         </Reveal>
                     </div>
                 </div>
