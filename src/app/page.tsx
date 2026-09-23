@@ -382,42 +382,28 @@ const Page = () => {
             </section>
 
             {/* ── The chef ───────────────────────────────── */}
-            <section className='border-t border-white/10 px-6 py-20 md:px-12 md:py-28'>
-                <div className='grid gap-10 md:grid-cols-[240px_1fr] md:gap-16'>
-                    <div className='md:sticky md:top-28 md:self-start'>
+            <section className='relative border-t border-white/10'>
+                <div className='relative flex min-h-[70svh] items-end overflow-hidden md:min-h-svh'>
+                    <HeroVideo mp4='/video/chef.mp4' webm='/video/chef.webm' poster='/video/chef-poster.jpg' />
+                    <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent' />
+                    <div className='relative z-10 w-full px-6 pt-24 pb-12 md:px-12 md:pb-20'>
                         <SectionLabel>/THE CHEF</SectionLabel>
-                        <p className='mt-4 hidden text-sm leading-relaxed text-white/70 md:block'>
-                            The craft of Caserta, fired nightly in Wynwood.
+                        <h2 className='font-display mt-5 text-3xl leading-tight font-medium uppercase md:text-5xl'>
+                            The world&rsquo;s best pizza chef
+                        </h2>
+                        <p className='mt-6 max-w-xl text-lg leading-relaxed text-white/80'>
+                            Behind every pizza stands Francesco Martucci of Pizzeria I Masanielli, Caserta, the
+                            pizzeria voted number one in the world. Decades of obsession with dough, fire and
+                            flavor, now served table-side in Miami.
+                        </p>
+                        <p className='mt-4 max-w-xl text-sm leading-relaxed text-white/60 italic'>
+                            &ldquo;For me, pizza is far more than just food. It is my passion, my craft, my life,
+                            and my way of expressing both tradition and creativity.&rdquo;
+                        </p>
+                        <p className='mt-6 text-xs tracking-[0.2em] text-[#929292] uppercase'>
+                            Francesco Martucci · Chef &amp; Pizzaiolo
                         </p>
                     </div>
-                    <Reveal>
-                        <div className='grid items-center gap-10 md:grid-cols-[260px_1fr] md:gap-12 lg:grid-cols-[360px_1fr] lg:gap-14'>
-                            <div className='overflow-hidden'>
-                                <LightboxImage
-                                    src='/images/thechef.jpg'
-                                    alt='Low-key profile portrait of chef Francesco Martucci, Wynwood, Miami'
-                                    className='aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-105'
-                                />
-                            </div>
-                            <div>
-                                <h2 className='font-display text-3xl leading-tight font-medium uppercase md:text-4xl'>
-                                    The world&rsquo;s best pizza chef
-                                </h2>
-                                <p className='mt-6 max-w-xl text-lg leading-relaxed text-white/80'>
-                                    Behind every pizza stands Francesco Martucci of Pizzeria I Masanielli, Caserta,
-                                    the pizzeria voted number one in the world. Decades of obsession with dough,
-                                    fire and flavor, now served table-side in Miami.
-                                </p>
-                                <p className='mt-4 max-w-xl text-sm leading-relaxed text-white/50 italic'>
-                                    &ldquo;For me, pizza is far more than just food. It is my passion, my craft, my
-                                    life, and my way of expressing both tradition and creativity.&rdquo;
-                                </p>
-                                <p className='mt-6 text-xs tracking-[0.2em] text-[#929292] uppercase'>
-                                    Francesco Martucci · Chef &amp; Pizzaiolo
-                                </p>
-                            </div>
-                        </div>
-                    </Reveal>
                 </div>
             </section>
 
