@@ -241,9 +241,6 @@
   animation: marquee-scroll 60s linear infinite;
   will-change: transform;
 }
-.marquee-track:hover {
-  animation-play-state: paused;
-}
 
 /* Scroll reveal */
 .reveal {

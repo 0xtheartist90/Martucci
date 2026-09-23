@@ -51,7 +51,7 @@ const PIZZAS = [
 ];
 
 // Mosaic on a fixed row grid: the oven shot runs tall down the left, wide room shots span two columns.
-const RESTAURANT_SHOTS = [
+const RESTAURANT_SHOTS: { src: string; alt: string; cell: string; position?: string }[] = [
     {
         src: '/images/Martucci/Francesco%20(9).webp',
         alt: 'Wood-fired pizza on a peel beside the glowing hearth at Francesco Martucci Wynwood',
@@ -72,8 +72,9 @@ const RESTAURANT_SHOTS = [
     { src: '/images/cdn/wine-wall.jpg', alt: 'Floor-to-ceiling wine wall at Francesco Martucci Miami', cell: '' },
     {
         src: '/images/Martucci/Francesco%20(8).webp',
-        alt: 'Pizzaiolo sliding a fresh pizza from the wooden peel at Francesco Martucci',
-        cell: ''
+        alt: 'Pizzaiolo finishing a wood-fired pizza on the peel at Francesco Martucci',
+        cell: '',
+        position: 'object-bottom'
     },
     { src: '/images/restaurant-1.jpg', alt: 'Private dining room with chandelier and framed art at Francesco Martucci', cell: '' },
     { src: '/images/restaurant-5.jpg', alt: 'View across the bar toward the open kitchen at Francesco Martucci Wynwood', cell: '' }
@@ -134,12 +135,12 @@ const Page = () => {
                     <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
                     <div className='relative z-10 w-full px-6 pt-28 pb-10 md:px-12 md:pt-32 md:pb-44'>
                         <img src='/images/cdn/laurel-white.png' alt='' className='mb-5 h-10 w-auto opacity-90 md:h-12' />
-                        <h1 className='font-display max-w-2xl text-3xl leading-[1.1] font-medium uppercase md:text-5xl'>
-                            Best Pizzeria
+                        <h1 className='font-display max-w-2xl text-4xl leading-[1.1] font-medium uppercase md:text-6xl'>
+                            #1 in Miami
                             <br />
-                            in the World 2019–2025
+                            #5 in America
                         </h1>
-                        <div className='mt-4 text-[11px] font-bold tracking-[0.35em] text-white/60 uppercase md:text-xs'>
+                        <div className='mt-5 text-sm font-bold tracking-[0.35em] text-white/90 uppercase md:text-lg'>
                             50 Top Pizza
                         </div>
                     </div>
@@ -157,7 +158,7 @@ const Page = () => {
                         <div key={copy} className='flex' aria-hidden={copy === 1}>
                             {AWARDS.map((award, i) => (
                                 <div key={i} className='w-[320px] shrink-0 border-r border-white/10 px-8'>
-                                    <img src={'/images/cdn/laurel.png'} alt='' className='mb-4 h-10 w-auto opacity-80' />
+                                    <img src={'/images/cdn/laurel-white.png'} alt='' className='mb-4 h-8 w-auto opacity-80' />
                                     <div className='text-sm leading-snug font-bold tracking-wide'>{award.quote}</div>
                                     <div className='mt-2 text-xs tracking-[0.15em] text-[#929292]'>{award.source}</div>
                                 </div>
@@ -317,7 +318,7 @@ const Page = () => {
                                         <LightboxImage
                                             src={shot.src}
                                             alt={shot.alt}
-                                            className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
+                                            className={`h-full w-full object-cover transition-transform duration-700 hover:scale-105 ${shot.position ?? ''}`}
                                         />
                                     </div>
                                 </Reveal>
@@ -395,7 +396,7 @@ const Page = () => {
             <footer className='border-t border-white/10 px-6 pt-16 pb-8 text-center md:px-12 md:pt-20 md:text-left'>
                 <div className='grid grid-cols-2 gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8'>
                     <div className='col-span-2 md:col-span-1'>
-                        <h3 className='font-display text-3xl leading-[1.1] font-medium uppercase md:text-4xl'>
+                        <h3 className='font-display text-xl leading-[1.6] font-normal tracking-[0.35em] uppercase md:text-2xl'>
                             Francesco
                             <br />
                             Martucci
