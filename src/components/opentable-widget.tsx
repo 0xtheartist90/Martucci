@@ -17,6 +17,12 @@ const OpenTableWidget = () => {
             style.id = 'ot-widget-overrides';
             style.textContent = [
                 '.ot-dtp-picker .ot-title{display:none!important}',
+                // Desktop only: drop the widget's dark panel and the leftover white form strip.
+                // The mobile standard theme needs its own backgrounds, so it stays untouched.
+                '@media (min-width:768px){',
+                '.ot-dtp-picker{background:transparent!important;padding:0!important}',
+                '.ot-dtp-picker .ot-dtp-picker-form{width:fit-content!important}',
+                '}',
                 // The wide theme lays its fields out side by side at a fixed width;
                 // stack them full-width on phones so nothing runs off screen.
                 '@media (max-width:767px){',

@@ -3,6 +3,8 @@ import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 
+import SmoothScroll from '@/components/smooth-scroll';
+
 import '@/app/globals.css';
 
 const lato = Lato({
@@ -32,8 +34,11 @@ export const metadata: Metadata = {
 
 const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
-        <html lang='en' className='scroll-smooth'>
-            <body className={`${lato.variable} martucci-body overscroll-none antialiased`}>{children}</body>
+        <html lang='en'>
+            <body className={`${lato.variable} martucci-body overscroll-none antialiased`}>
+                <SmoothScroll />
+                {children}
+            </body>
         </html>
     );
 };
