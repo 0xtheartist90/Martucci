@@ -2,7 +2,17 @@
 
 import { useEffect, useRef } from 'react';
 
-const HeroVideo = ({ mp4, webm, poster }: { mp4: string; webm: string; poster: string }) => {
+const HeroVideo = ({
+    mp4,
+    webm,
+    poster,
+    className = 'absolute inset-0 h-full w-full object-cover'
+}: {
+    mp4: string;
+    webm: string;
+    poster: string;
+    className?: string;
+}) => {
     const ref = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -17,7 +27,7 @@ const HeroVideo = ({ mp4, webm, poster }: { mp4: string; webm: string; poster: s
     }, []);
 
     return (
-        <video ref={ref} autoPlay loop muted playsInline poster={poster} className='absolute inset-0 h-full w-full object-cover'>
+        <video ref={ref} autoPlay loop muted playsInline poster={poster} className={className}>
             <source src={mp4} type='video/mp4' />
             <source src={webm} type='video/webm' />
         </video>

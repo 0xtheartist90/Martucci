@@ -382,11 +382,16 @@ const Page = () => {
             </section>
 
             {/* ── The chef ───────────────────────────────── */}
-            <section className='relative border-t border-white/10'>
-                <div className='relative flex min-h-[70svh] items-end overflow-hidden md:min-h-svh'>
-                    <HeroVideo mp4='/video/chef.mp4' webm='/video/chef.webm' poster='/video/chef-poster.jpg' />
-                    <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent' />
-                    <div className='relative z-10 w-full px-6 pt-24 pb-12 md:px-12 md:pb-20'>
+            <section className='relative border-t border-white/10 bg-black'>
+                <div className='relative overflow-hidden md:flex md:min-h-svh md:items-end'>
+                    <HeroVideo
+                        mp4='/video/chef.mp4'
+                        webm='/video/chef.webm'
+                        poster='/video/chef-poster.jpg'
+                        className='aspect-video w-full object-cover md:absolute md:inset-0 md:aspect-auto md:h-full'
+                    />
+                    <div className='absolute inset-0 hidden bg-gradient-to-t from-black via-transparent to-transparent md:block' />
+                    <div className='relative z-10 w-full px-6 pt-10 pb-14 md:px-12 md:pt-24 md:pb-20'>
                         <SectionLabel>/THE CHEF</SectionLabel>
                         <h2 className='font-display mt-5 text-3xl leading-tight font-medium uppercase md:text-5xl'>
                             The world&rsquo;s best pizza chef
