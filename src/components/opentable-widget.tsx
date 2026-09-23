@@ -17,6 +17,8 @@ const OpenTableWidget = () => {
             style.id = 'ot-widget-overrides';
             style.textContent = [
                 '.ot-dtp-picker .ot-title{display:none!important}',
+                // Drop the widget's own dark panel; the fields sit directly on the page.
+                '.ot-dtp-picker{background:transparent!important;padding:0!important}',
                 // The wide theme lays its fields out side by side at a fixed width;
                 // stack them full-width on phones so nothing runs off screen.
                 '@media (max-width:767px){',
