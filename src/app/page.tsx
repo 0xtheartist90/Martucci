@@ -80,20 +80,77 @@ const RESTAURANT_SHOTS: { src: string; alt: string; cell: string; position?: str
     { src: '/images/restaurant-5.jpg', alt: 'View across the bar toward the open kitchen at Francesco Martucci Wynwood', cell: '' }
 ];
 
+// Minimal line icons drawn in the site's thin-stroke style.
+const CraftIcon = ({ kind }: { kind: string }) => {
+    const common = {
+        width: 30,
+        height: 30,
+        viewBox: '0 0 24 24',
+        fill: 'none',
+        stroke: 'currentColor',
+        strokeWidth: 1.3,
+        strokeLinecap: 'round' as const,
+        strokeLinejoin: 'round' as const,
+        'aria-hidden': true
+    };
+    switch (kind) {
+        case 'dough': // wheat ear
+            return (
+                <svg {...common}>
+                    <path d='M12 21V7' />
+                    <path d='M12 7c-2.4 0-3.6-1.4-3.6-3.5C10.5 3.5 12 4.9 12 7Z' />
+                    <path d='M12 7c2.4 0 3.6-1.4 3.6-3.5C13.5 3.5 12 4.9 12 7Z' />
+                    <path d='M12 12c-2.4 0-3.6-1.4-3.6-3.5C10.5 8.5 12 9.9 12 12Z' />
+                    <path d='M12 12c2.4 0 3.6-1.4 3.6-3.5C13.5 8.5 12 9.9 12 12Z' />
+                    <path d='M12 17c-2.4 0-3.6-1.4-3.6-3.5C10.5 13.5 12 14.9 12 17Z' />
+                    <path d='M12 17c2.4 0 3.6-1.4 3.6-3.5C13.5 13.5 12 14.9 12 17Z' />
+                </svg>
+            );
+        case 'ingredients': // basil leaf
+            return (
+                <svg {...common}>
+                    <path d='M19 4c.6 6.5-1.5 11.4-5.2 13.6-2.5 1.5-5.6 1-7-1.4-1.4-2.4-.5-5.4 2-6.9C12.5 7.1 15 5 19 4Z' />
+                    <path d='M5 21c3-4.5 7-8.5 11-11.5' />
+                </svg>
+            );
+        case 'oven': // flame
+            return (
+                <svg {...common}>
+                    <path d='M12 21c3.6 0 6-2.4 6-5.6 0-3.7-2.7-5.9-4.4-8.9-.2 1.7-.8 2.9-2 4-1.2-.8-1.8-1.9-2-3.5-1.9 2.2-3.6 5-3.6 8.4C6 18.6 8.4 21 12 21Z' />
+                    <path d='M12 21c-1.6 0-2.7-1.2-2.7-2.9 0-1.5 1-2.7 2.7-4.1 1.7 1.4 2.7 2.6 2.7 4.1 0 1.7-1.1 2.9-2.7 2.9Z' />
+                </svg>
+            );
+        default: // experience: cloche
+            return (
+                <svg {...common}>
+                    <path d='M4 17h16' />
+                    <path d='M5 17a7 7 0 0 1 14 0' />
+                    <path d='M12 10V8.5' />
+                    <circle cx='12' cy='7.6' r='0.9' />
+                    <path d='M2.5 20h19' />
+                </svg>
+            );
+    }
+};
+
 const CRAFT = [
     {
+        icon: 'dough',
         title: 'The Dough',
         text: 'Long-fermented and highly hydrated for an ultra-light, airy crust, handled with the precision that made it famous in Caserta.'
     },
     {
+        icon: 'ingredients',
         title: 'The Ingredients',
         text: 'Buffalo mozzarella from Campania, heirloom tomatoes and seasonal Florida produce. The finest of Italy, accented with Miami flavor.'
     },
     {
+        icon: 'oven',
         title: 'The Oven',
         text: 'A dedicated wood-fired hearth delivers the authentic crisp, soft-centered, slightly smoky char of a true wood-fired pizza.'
     },
     {
+        icon: 'experience',
         title: 'The Experience',
         text: 'From signature classics to the multi-course “Degustazione” pizza tasting menu. Pizza re-imagined, shared among friends.'
     }
@@ -218,27 +275,18 @@ const Page = () => {
                             </h2>
                         </Reveal>
                         <Reveal className='mt-10'>
-                            <div className='grid md:grid-cols-[1fr_320px]'>
-                                <div className='border border-white/15 p-8 max-md:border-b-0 md:border-r-0 md:p-10'>
-                                    <div className='flex flex-wrap items-baseline justify-between gap-4'>
-                                        <h3 className='font-display text-2xl font-medium uppercase md:text-3xl'>
-                                            Degustazione · Tasting Menu
-                                        </h3>
-                                        <span className='text-lg text-white/80'>180 per person</span>
-                                    </div>
-                                    <p className='mt-4 max-w-2xl leading-relaxed text-white/60'>
-                                        Eight courses through the world of Martucci: from the Insalata di Funghi
-                                        Assoluti and Tortelli Cacio e Pepe to A5 Wagyu alla Brace, the two-temperature
-                                        Futuro di Marinara and Sichuan gelato. Sommelier-selected wine pairing, 100.
-                                    </p>
+                            <div className='border border-white/15 p-8 md:p-10'>
+                                <div className='flex flex-wrap items-baseline justify-between gap-4'>
+                                    <h3 className='font-display text-2xl font-medium uppercase md:text-3xl'>
+                                        Degustazione · Tasting Menu
+                                    </h3>
+                                    <span className='text-lg text-white/80'>180 per person</span>
                                 </div>
-                                <div className='overflow-hidden max-md:h-56'>
-                                    <LightboxImage
-                                        src='/images/cdn/pizza-selection.jpg'
-                                        alt='Selection of wood-fired pizzas fresh from the oven at Francesco Martucci'
-                                        className='h-full w-full object-cover transition-transform duration-700 hover:scale-105'
-                                    />
-                                </div>
+                                <p className='mt-4 max-w-2xl leading-relaxed text-white/60'>
+                                    Eight courses through the world of Martucci: from the Insalata di Funghi Assoluti
+                                    and Tortelli Cacio e Pepe to A5 Wagyu alla Brace, the two-temperature Futuro di
+                                    Marinara and Sichuan gelato. Sommelier-selected wine pairing, 100.
+                                </p>
                             </div>
                         </Reveal>
                         <Reveal className='mt-12'>
@@ -265,9 +313,14 @@ const Page = () => {
                             {CRAFT.map((item, i) => (
                                 <Reveal key={item.title} delay={i * 80}>
                                     <div className='grid gap-3 py-8 md:grid-cols-[280px_1fr] md:gap-10'>
-                                        <h3 className='font-display text-2xl font-medium uppercase md:text-3xl'>
-                                            {item.title}
-                                        </h3>
+                                        <div className='flex items-center gap-4'>
+                                            <span className='text-white/60'>
+                                                <CraftIcon kind={item.icon} />
+                                            </span>
+                                            <h3 className='font-display text-2xl font-medium uppercase md:text-3xl'>
+                                                {item.title}
+                                            </h3>
+                                        </div>
                                         <p className='max-w-xl leading-relaxed text-white/70'>{item.text}</p>
                                     </div>
                                 </Reveal>
