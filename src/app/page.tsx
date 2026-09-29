@@ -19,14 +19,9 @@ const AWARDS = [
 // Cell classes keep every row the same height: span-4 at 2:1, span-2 at 1:1, span-3 at 3:2.
 const PIZZAS = [
     {
-        src: '/images/cdn/pizza-smoking.jpg',
-        alt: 'Wood-fired pizza with smoking char at Francesco Martucci Wynwood, Miami',
-        cell: 'col-span-2 aspect-[16/10] md:col-span-4 md:aspect-[2/1]'
-    },
-    {
         src: '/images/Martucci/Francesco%20(2).webp',
         alt: 'Wood-fired pizza with tomato, creamy burrata and fresh basil at Francesco Martucci',
-        cell: 'aspect-square md:col-span-2'
+        cell: 'col-span-2 aspect-[16/10] md:col-span-4 md:aspect-[2/1]'
     },
     {
         src: '/images/Martucci/Francesco%20(6).webp',
@@ -36,17 +31,17 @@ const PIZZAS = [
     {
         src: '/images/cdn/pizza-prosciutto.webp',
         alt: 'Wood-fired pizza topped with prosciutto, black olives and fresh basil on a leopard-spotted crust',
-        cell: 'col-span-2 aspect-[16/10] md:col-span-4 md:aspect-[2/1]'
+        cell: 'aspect-square md:col-span-2'
     },
     {
         src: '/images/Martucci/Francesco%20(7).webp',
         alt: 'Artichoke and herb pizza on a wooden peel, fresh from the wood-fired oven',
-        cell: 'aspect-square md:col-span-3 md:aspect-[3/2]'
+        cell: 'aspect-square md:col-span-2'
     },
     {
         src: '/images/Martucci/Francesco.webp',
         alt: 'Mortadella and pistachio pizza with fresh mozzarella at Francesco Martucci Wynwood',
-        cell: 'aspect-square md:col-span-3 md:aspect-[3/2]'
+        cell: 'aspect-square md:col-span-2'
     }
 ];
 
@@ -62,22 +57,19 @@ const RESTAURANT_SHOTS: { src: string; alt: string; cell: string; position?: str
         alt: 'Dining room with colorful murals and timber columns at Francesco Martucci Wynwood',
         cell: 'col-span-2'
     },
-    { src: '/images/restaurant-3.jpg', alt: 'Cozy corner banquette under exposed wooden beams at Francesco Martucci', cell: '' },
     {
         src: '/images/Martucci/Francesco%20(1).webp',
         alt: 'Intimate dining tables beneath hanging greenery at Francesco Martucci Wynwood',
         cell: ''
     },
-    { src: '/images/restaurant-4.jpg', alt: 'Backlit bar with leather seating at Francesco Martucci Wynwood', cell: 'col-span-2' },
-    { src: '/images/cdn/wine-wall.jpg', alt: 'Floor-to-ceiling wine wall at Francesco Martucci Miami', cell: '' },
     {
         src: '/images/Martucci/Francesco%20(8).webp',
         alt: 'Pizzaiolo finishing a wood-fired pizza on the peel at Francesco Martucci',
         cell: '',
         position: 'object-bottom'
     },
-    { src: '/images/restaurant-1.jpg', alt: 'Private dining room with chandelier and framed art at Francesco Martucci', cell: '' },
-    { src: '/images/restaurant-5.jpg', alt: 'View across the bar toward the open kitchen at Francesco Martucci Wynwood', cell: '' }
+    { src: '/images/cdn/dining-room-2.jpg', alt: 'Warm industrial dining room with wood tables in Wynwood', cell: '' },
+    { src: '/images/cdn/dining-room.jpg', alt: 'Dining room of Francesco Martucci in Wynwood, Miami', cell: 'col-span-2' }
 ];
 
 // Minimal line icons drawn in the site's thin-stroke style.
@@ -364,7 +356,7 @@ const Page = () => {
                                 Wood-fired tradition meets South Florida
                             </h2>
                         </Reveal>
-                        <div className='mt-12 grid auto-rows-[180px] grid-cols-2 gap-4 md:auto-rows-[260px] md:grid-cols-3'>
+                        <div className='mt-12 grid auto-rows-[190px] grid-cols-2 gap-4 md:auto-rows-[340px] md:grid-cols-3'>
                             {RESTAURANT_SHOTS.map((shot, i) => (
                                 <Reveal key={shot.src} delay={i * 60} className={shot.cell}>
                                     <div className='h-full w-full overflow-hidden'>
