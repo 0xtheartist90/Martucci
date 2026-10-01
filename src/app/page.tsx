@@ -68,7 +68,11 @@ const RESTAURANT_SHOTS: { src: string; alt: string; cell: string; position?: str
         cell: '',
         position: 'object-bottom'
     },
-    { src: '/images/cdn/dining-room-2.jpg', alt: 'Warm industrial dining room with wood tables in Wynwood', cell: '' },
+    {
+        src: '/images/cdn/dining-room-2.jpg',
+        alt: 'Warm industrial dining room with wood tables in Wynwood',
+        cell: 'col-span-2 md:col-span-1'
+    },
     { src: '/images/cdn/dining-room.jpg', alt: 'Dining room of Francesco Martucci in Wynwood, Miami', cell: 'col-span-2' }
 ];
 
@@ -184,18 +188,30 @@ const Page = () => {
                     <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30' />
                     <div className='relative z-10 w-full px-6 pt-28 pb-10 md:px-12 md:pt-32 md:pb-44'>
                         <img src='/images/cdn/laurel-white.png' alt='' className='mb-5 h-10 w-auto opacity-90 md:h-12' />
-                        <h1 className='font-display max-w-2xl text-4xl leading-[1.1] font-medium uppercase md:text-6xl'>
-                            #1 in Miami
+                        <h1 className='font-display max-w-2xl text-3xl leading-[1.15] font-medium uppercase md:text-5xl'>
+                            #1 Pizza in Miami
                             <br />
-                            #5 in America
+                            #27 Best Pizza Worldwide
                         </h1>
                         <div className='mt-5 text-sm font-bold tracking-[0.35em] text-white/90 uppercase md:text-lg'>
                             50 Top Pizza
                         </div>
+                        <p className='mt-6 hidden max-w-3xl text-base leading-relaxed font-medium text-white/85 md:block md:text-lg'>
+                            Born in Caserta, Italy, chef Francesco Martucci has brought his beloved Pizzeria I
+                            Masanielli legacy to Miami&rsquo;s vibrant Wynwood neighborhood. Here, wood-fired
+                            tradition meets South Florida energy: the finest Italian ingredients, meticulously
+                            sourced, combined with local produce and bold Miami-flavor accents.
+                        </p>
                     </div>
                 </div>
                 {/* Below the video on phones; pulled up over it on larger screens. */}
                 <div className='relative z-10 px-6 pt-6 pb-2 md:-mt-36 md:px-12 md:pt-0 md:pb-16'>
+                    <p className='mb-6 text-base leading-relaxed font-medium text-white/85 md:hidden'>
+                        Born in Caserta, Italy, chef Francesco Martucci has brought his beloved Pizzeria I
+                        Masanielli legacy to Miami&rsquo;s vibrant Wynwood neighborhood. Here, wood-fired tradition
+                        meets South Florida energy: the finest Italian ingredients, meticulously sourced, combined
+                        with local produce and bold Miami-flavor accents.
+                    </p>
                     <OpenTableWidget />
                 </div>
             </section>
