@@ -172,7 +172,7 @@ const Page = () => {
                 <img src={'/images/cdn/martucci-logo.png'} alt='Francesco Martucci' className='h-10 w-auto md:h-12' />
                 <a
                     href='tel:+17542195694'
-                    className='border border-white px-5 py-2.5 text-xs font-bold tracking-[0.2em] text-white transition-colors duration-300 hover:bg-white hover:text-black'>
+                    className='border border-white bg-white px-5 py-2.5 text-xs font-bold tracking-[0.2em] text-black transition-colors duration-300 hover:bg-transparent hover:text-white'>
                     CALL TO RESERVE
                 </a>
             </nav>
