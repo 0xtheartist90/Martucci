@@ -17,6 +17,9 @@ const OpenTableWidget = () => {
             style.id = 'ot-widget-overrides';
             style.textContent = [
                 '.ot-dtp-picker .ot-title{display:none!important}',
+                // Native dropdown panels render with page styles on Windows; the dark
+                // theme's white select text becomes invisible there. Force readable options.
+                '.ot-dtp-picker select option{color:#000!important;background:#fff!important}',
                 // Desktop only: drop the widget's dark panel and the leftover white form strip.
                 // The mobile standard theme needs its own backgrounds, so it stays untouched.
                 '@media (min-width:768px){',
